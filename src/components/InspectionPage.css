@@ -1,0 +1,118 @@
+/* InspectionPage.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9cb70; /* Light blue background */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.inspection-page {
+    background-color: #fffef5; /* White background for the form */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px; /* Maximum width to control content spread */
+    width: 90%; /* Ensures responsiveness */
+    margin: 20px auto; /* Centered with space at the top and bottom */
+    flex: 1; /* Ensures it grows and fills available space */
+    overflow-y: auto; /* Enables scrolling for overflowing content */
+    max-height: 90vh; /* Ensures the page is scrollable if content exceeds viewport */
+}
+
+h1 {
+    color: #191a1c; /* Blue color for main heading */
+    text-align: center;
+    margin-top: 0;
+}
+
+h2 {
+    color: #cfcf37; /* Green color for subheadings */
+    margin-top: 15px;
+}
+
+h3 {
+    color: #dc3545; /* Red color for translated summaries headings */
+    margin-top: 15px;
+}
+
+input[type="text"],
+textarea {
+    width: calc(100% - 20px); /* Adjusted width to ensure padding space */
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ddf719; /* Blue border */
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #b1be06; /* Darker blue when focused */
+    outline: none;
+}
+
+textarea {
+    resize: vertical; /* Allows resizing vertically */
+    min-height: 100px; /* Minimum height for better text input */
+}
+
+button {
+    background-color: #2a3002; /* Blue button */
+    color: rgb(250, 8, 8);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px 0;
+    width: 100%; /* Ensures buttons span the full width */
+}
+
+button:hover {
+    background-color: #cb950c; /* Darker blue on hover */
+}
+
+.error {
+    color: #dc3545; /* Red color for error messages */
+    text-align: center;
+    margin: 10px 0;
+}
+
+pre {
+    background-color: #eef2f6; /* Light gray for summary and translated texts */
+    border-radius: 4px;
+    padding: 10px;
+    overflow-x: auto;
+    margin: 10px 0;
+}
+
+.form-section {
+    margin-bottom: 20px; /* Adds space between different sections */
+}
+
+.footer {
+    background-color: #ffffff; /* Matches form background */
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .inspection-page {
+        width: 195%; /* Ensures it fits smaller screens */
+        padding: 15px;
+        max-height: 100vh; /* Ensures full height on mobile and smaller screens */
+    }
+
+    input[type="text"],
+    textarea,
+    button {
+        width: 100%; /* Ensures inputs and buttons fit the screen size */
+    }
+}

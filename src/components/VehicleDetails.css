@@ -1,0 +1,128 @@
+.vehicle-details-page {
+  text-align: center;
+  background-color: #fdfdf9;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+}
+
+.header {
+  background-color: black;
+  color: #a19d84;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: antiquewhite;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  overflow-y: auto;
+}
+
+.section-heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.vehicle-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.vehicle-card {
+  background-color: #fefefe;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.vehicle-card:hover {
+  transform: scale(1.02);
+}
+
+.vehicle-card h3 {
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.vehicle-images {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-height: 450px; /* Maximum height for scrollable images */
+  overflow-y: auto; /* Enables scrolling */
+}
+
+.vehicle-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vehicle-image {
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  transition: transform 0.2s;
+}
+
+.vehicle-image:hover {
+  transform: scale(1.05);
+}
+
+.service-button {
+  background-color: rgb(242, 221, 114);
+  color: rgb(16, 16, 14);
+  padding: 6px 12px; /* Reduced button padding for a smaller look */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  margin-top: 10px;
+}
+
+.service-button:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+.error, .no-vehicles {
+  color: red;
+  margin: 20px;
+}
+
+.footer {
+  background-color: black;
+  color: #ffd700;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}

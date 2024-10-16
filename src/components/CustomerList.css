@@ -1,0 +1,144 @@
+/* Container for the entire page content */
+/* Container for the entire page content */
+.index-container {
+  text-align: center;
+  padding: 0px;
+  position: relative; /* Enable positioning for pseudo-element */
+  overflow-y: auto; /* Enable vertical scrolling for content */
+  max-height: 80vh; /* Set a maximum height for the container */
+  width: 100vw; /* Increase the width of the container for a broader look */
+  margin: 0 auto; /* Center the container horizontally */
+  /* background-color: rgba(0, 0, 0, 0.5); Remove or comment out this line */
+}
+
+
+/* Single background image that scrolls horizontally */
+.index-container::before {
+  content: "";
+  position: absolute;
+  top:20px;
+  left: 0;
+  width: 200%; /* Increase the width for smooth horizontal scrolling */
+  height: 600%;
+  background-image: url('https://s7d2.scene7.com/is/image/Caterpillar/CM20210915-a9d7b-860aa');
+  background-size: cover; /* Adjust to maintain aspect ratio */
+  background-repeat: no-repeat; /* No repeating of the background image */
+  background-position: center; /* Center the image */
+  z-index: -1; /* Ensure it stays behind the content */
+  animation: scroll-horizontal 10s linear infinite; /* Slow scrolling effect */
+}
+
+
+/* Other styles... */
+
+
+
+
+/* Keyframes for horizontal scrolling background */
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Scrolls the background to the left */
+  }
+}
+
+
+/* Header styling */
+.header {
+  background-color: #ffd700;
+  padding: 15px;
+  font-size: 32px;
+  color: black;
+  font-weight: bold; /* Make the text bold */
+  letter-spacing: 1px; /* Add slight letter spacing */
+  position: relative; /* Ensure header stays above background */
+  z-index: 1; /* Bring header above the background */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  margin-bottom: 10px; /* Space below the header */
+}
+
+
+/* Welcome message styling */
+.welcome-message {
+  background: rgba(255, 215, 0, 0.2); /* Light gold background */
+  padding: 10px;
+  border-radius: 8px; /* Rounded corners */
+  font-size: 20px; /* Adjusted font size */
+  color: #ffd700; /* Gold color text */
+  margin: 20px 0;
+  position: relative; /* Ensure it stays above background */
+  z-index: 1; /* Bring welcome message above the background */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for text */
+}
+
+
+/* Customer grid layout */
+.customer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  justify-items: center;
+  position: relative; /* Ensure it stays above background */
+  z-index: 1; /* Bring customer grid above the background */
+  padding-bottom: 20px; /* Ensure spacing at the bottom */
+  width: 100%; /* Full width for customer grid */
+}
+
+
+/* Styling for individual customer cards */
+.customer-card {
+  background-color: rgba(230, 236, 229, 0.9); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative; /* Ensure card is above the background */
+  z-index: 1; /* Set customer card above background */
+  width: 250px;
+   /* Fixed width for consistency */
+}
+
+
+/* Hover effect for customer cards */
+.customer-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px #0000004d; /* Deeper shadow on hover */
+}
+
+
+/* Customer image */
+.customer-card img {
+  width: 80px;
+  margin-bottom: 10px;
+  border-radius: 50%; /* Make the image circular */
+  border: 2px solid #ffd700; /* Add a gold border around the image */
+}
+
+
+/* Customer name and email styling */
+.customer-name,
+.email {
+  color: rgb(239, 127, 22);
+  font-weight: bold; /* Bold the text for better readability */
+  margin: 5px 0; /* Add some margin between text */
+}
+
+
+/* Footer styling */
+.footer {
+  margin-top: 40px;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+  font-size: 14px; /* Adjusted for readability */
+  letter-spacing: 0.5px; /* Add slight spacing for a modern look */
+}

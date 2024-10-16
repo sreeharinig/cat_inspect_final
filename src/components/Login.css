@@ -1,0 +1,173 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, hwb(63 44% 3%) 10%, #f5a666 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-form {
+  margin: 0 auto;
+  width: 107%; /* Change to 100% for full width */
+  max-width: 1200px; /* Set a max-width to prevent it from getting too wide */
+  background: #FFFFFF;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 0 20px 6px rgb(244, 156, 62);
+  position: relative; /* To position flying images relative to this box */
+}
+
+@media (max-width: 980px) {
+  .box-form {
+    flex-flow: wrap;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+  }
+}
+
+.box-form .left {
+  width: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('https://s7d2.scene7.com/is/image/Caterpillar/CM20210915-a9d7b-860aa');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: #060505; /* To position flying images */
+}
+
+.box-form .left .overlay {
+  padding: 30px; /* Dark overlay for better text contrast */
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* Align children vertically */
+  justify-content: center; /* Center the overlay content */
+}
+
+.box-form .left .overlay h1 {
+  font-size: 40px; /* Increase font size */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px; /* Space below heading */
+  color: #ffdd57; /* Vibrant yellow color */
+}
+
+.box-form .left .overlay p {
+  font-size: 20px; /* Adjust font size */
+  color: #ffffff; /* White color for the paragraph */
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px; /* Space below paragraph */
+}
+
+.box-form .right {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  color: #ffdd57; /* Ensure consistent heading color */
+  text-align: justify;
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.box-form h2 {
+  font-size: 24px;
+  color: #070601;
+  font-family:Arial, Helvetica, sans-serif ; /* Change this to your desired color */
+}
+
+.login-box {
+  padding: 0;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #120f01; /* Border color */
+  background-color: #f5ec87d4; /* Dark background for input */
+  color: #050404; /* Text color */
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.input-container input:focus {
+  outline: none;
+  border-color: #ffcc00; /* Focus border color */
+  background-color: #fff79dd4; /* Darker input on focus */
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #ffdd57; /* Button background */
+  color: #000; /* Button text color */
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #ffcc00; /* Hover effect */
+}
+
+.error-message {
+  color: red; /* Error message color */
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .box-form {
+    flex-flow: wrap;
+  }
+
+  .box-form .left, .box-form .right {
+    width: 100%;
+  }
+
+  .input-container input, .login-btn {
+    font-size: 14px; /* Smaller font size on mobile */
+    padding: 10px;
+  }
+}
+
+/* Flying images styling */
+.flying-image {
+  position: absolute;
+  width: 100px; /* Adjust size as needed */
+  animation: fly 10s forwards; /* Flying animation */
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(100vh); /* Start from bottom */
+    opacity: 0; /* Start invisible */
+  }
+  50% {
+    opacity: 1; /* Become visible */
+  }
+  100% {
+    transform: translateY(-100vh); /* Move to top */
+    opacity: 0; /* Fade out */
+  }
+}
